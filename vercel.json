@@ -2,7 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/api", "destination": "/api/sendData.js" }
+    { "source": "/api", "destination": "/api/sendData.js" },
     { "source": "/sign-up", "destination": "/sign-up.html" },
     { "source": "/login", "destination": "/login.html" },
     { "source": "/karir", "destination": "/karir.html" },
