@@ -7,7 +7,7 @@
     { "source": "/karir", "destination": "/karir.html" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/libs/sweetalert/(.*)", "destination": "libs/sweetalert/libs/$1" },
-    { "source": "/api/send-data", "destinations": "sendData.js" }
+    { "source": "/api/send-data", "destination": "sendData.js" }
   ],
   "builds": [
     {
