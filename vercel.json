@@ -9,9 +9,4 @@
     { "source": "/karir", "destination": "/karir.html" },
     { "source": "/", "destination": "/index.html" },
   ],
-  "builds": [
-    {
-      "source": "sendData.js", "use": "@vercel/node" 
-    }
-  ]
 }
