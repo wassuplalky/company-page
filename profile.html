@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Ini adalah Profile, Dimana user bisa melihat data pribadi miliknya.">
+    <meta name="author" content="Bilal Az- Zaqi">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Details Profile</title>
+    <link rel="stylesheet" type="text/css" href="/css/profile.css">
+    <link rel="icon" type="image.png" sizes="32x32" href="/icons/logo.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav>
+                <h1>FlexiCreative Dynamics</h1>
+                <ul class="menu" id="menu">
+                    <li><a href="/index.html">Beranda</a></li>
+                    <li><a href="/sign-up.html">Daftar</a></li>
+                    <li><a href="login.html">Masuk</a></li>
+                    <li><a href="/karir.html">Karir</a></li>
+                    <li><a href="#">Sewa Jasa</a></li>
+                </ul>
+            </nav>
+            <div class="profile-menu">
+                <img src="/icons/person-circle (1).svg" alt="Profile Icon" id="profile-icon">
+                <ul class="dropdown-menu" id="dropdown-menu">
+                    <li><a href="#">Lihat Profil</a></li>
+                    <li><a href="#">Pengaturan</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <h2>Detail Profile</h2>
+
+        <div class="profile-picture">
+            <label for="upload-photo">
+                <img id="preview-photo" src="/icons/person-circle (1).svg" alt="Foto Profil">
+            </label>
+            <div class="change-overlay" onclick="openPhotoModal()">Ubah Foto</div>
+        </div>
+        
+        <!-- Modal Pop Up -->
+        <div class="photo-modal" id="photoModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closePhotoModal()">X</span>
+                <h3>Kelola Foto Profil</h3>
+                <img id="modal-preview" src="/icons/person-circle (1).svg" alt="Preview" class="modal-photo">
+                <input type="file" id="upload-photo" accept="image/*" style="display: none;" onclick="previewInModal(this)">
+
+                <div class="modal-buttons">
+                    <button onclick="document.getElementById('upload-photo').click()">Unggah Baru</button>
+                    <button onclick="removePhoto()">Hapus Foto</button>
+                </div>
+            </div>
+         </div>
+        
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="telepon">No. Telepon:</label>
+                <input type="tel" id="telepon" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="tempat">Tempat Lahir:</label>
+                <input type="ext" id="tempat" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="tanggal">Tanggal Lahir:</label>
+                <input type="date" id="tanggal" readonly>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" readonly></textarea>
+                <img src="/icons/pencil-square.svg" class="edit-icon" alt="Edit">
+            </div>
+        
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender">
+                    <option value="">--Pilih--</option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="save-btn">Simpan</button>
+                <button type="button" id="cancel-btn">Batal</button>
+            </div>
+        </form>
+    </main>
+    <script src="/js/profile.js"></script>
+    <script src="/libs/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
+
+<footer>
+    <p>Hak Cipta ©2025 FCD. Semua Hak Di Lindungi.</p>
+</footer>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Ini adalah Sign Up Page,Dimana saat website ini di klik melalui navbar bisa untuk membuat akun di website ini">
+    <meta name="author" content="Bilal Az-Zaqi">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/sign-up.css">
+    <link rel="icon" type="image.png" sizes="32x32" href="/icons/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container" onclick="myFunction (this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+                <nav>
+                    <h1>Selamat Datang Di FlexiCreative Dynamics</h1>
+                    <ul class="menu" id="menu">
+                        <li><a href="/index.html">Beranda</a></li>
+                        <li><a href="/sign-up.html">Daftar</a></li>
+                        <li><a href="/login.html">Masuk</a></li>
+                        <li><a href="/karir.html">Karir</a></li>
+                        <li><a href="#">Sewa Jasa</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    
+    <div class="form-container">
+        <form id="signupForm" action="#" method="post">
+        <h2>Daftar Akun Baru</h2>
+            <div class="user-box">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="username">Username:</label>
+                <input type="username" id="username" name="username" required>
+
+                <label for="phone">No Telp:</label>
+                <input type="tel" id="telepon" name="phone" pattern="[0-9]{8,15}" required>
+
+                <label for="email">Email:</label>             
+                <input type="email" id="email" name="email" required>
+
+                <label for="tempat">Tempat Lahir:</label>
+                <input type="text" id="tempat" name="tempat" required>
+
+                <label for="tanggal">Tanggal Lahir:</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender">
+                    <option value="">--Pilih--</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+
+                <label for="password">Password:</label>
+            </div>
+            <div class="pass-box">
+                <input type="password" id="password" name="password" required>
+                <!-- Kita Pasang onclick untuk merubah icon buka/tutup mata setiap di klik-->
+                <span id="mybutton" onclick="change()" class="show-hide">
+                    <!-- Icon Mata Bawaan Bootstrap-->
+                    <svg id="eye-icon" xmls="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="user-box">
+                <label for="confirmPass">Konfirmasi Password:</label>
+            </div>
+            <div class="pass-box">
+                <input type="password" id="confirmPass" name="confirmPass" required>
+                <!-- Kita Pasang onclick untuk merubah icon buka/tutup mata setiap di klik-->
+                <span id="mybutton2" onclick="change2()" class="show-hide2">
+                    <!-- Icon Mata Bawaan Bootstrap-->
+                    <svg id="eye-icon" xmls="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                    </svg>
+                </span>
+            </div>
+            <button id="submit">Sign Up</button>
+            <p>Already Have an Account? <a href="/login.html">Login</a></p>
+        </form>
+    </div>
+    <script src="/js/sign-up.js"></script>
+    <script src="/libs/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
+<footer>
+    <p>Hak Cipta ©2025 FCD.Semua Hak Di Lindungi.</p>
+</footer>

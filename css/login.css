@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #334;
+    color: #fff;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: left;
+}
+
+nav h1 {
+    font-size: 19px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 15px;
+    margin: 6px;
+    transition: .1s;
+}
+
+.menu-toggle {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    transition: transform 0.3s ease;
+    transform: translateX(-103%);
+    position: absolute;
+    top: 52px;
+    left: 3px;
+    background-color: #334;
+    flex-direction: column;
+    width: 80%;
+    max-width: 250px;
+    z-index: 1;
+}
+
+.menu.active {
+    transform: translateX(0%);
+}
+
+.menu li {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.change .bar-1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar-2 {
+    opacity: 0;
+}
+
+.change .bar-3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.container-form {
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user label, .user input {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="username"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 10px 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.show-hide-box {
+    position: relative;
+}
+
+.sh {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#eye-icon {
+    width: 20px;
+    height: 20px;
+    fill: #aaa;
+}
+
+#eye-icon:hover {
+    fill: #333;
+}
+
+.container-form a {
+    display: block;
+    text-align: right;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container-form a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #334;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #557;
+}
+
+footer {
+    background-color: #334;
+    color: #fff;
+    padding: 10px;
+    /*position: fixed;
+    bottom: 0;
+    width: 100%;*/
+    text-align: center;
+    font-size: 14px;
+}
