@@ -60,7 +60,7 @@ document.getElementById('login').addEventListener('click', function(event) {
     } 
 
     // kirim ke backend
-    fetch("https://company-page-project.vercel.app/login", {
+    fetch("https://company-page-project.vercel.app/api/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
