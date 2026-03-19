@@ -2,12 +2,12 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/api/send-data", "destination": "/sendData.js" }
+    { "source": "/libs/sweetalert/(.*)", "destination": "libs/sweetalert/libs/$1" },
     { "source": "/sign-up", "destination": "/sign-up.html" },
     { "source": "/login", "destination": "/login.html" },
     { "source": "/karir", "destination": "/karir.html" },
     { "source": "/", "destination": "/index.html" },
-    { "source": "/libs/sweetalert/(.*)", "destination": "libs/sweetalert/libs/$1" },
-    { "source": "/api/send-data", "destination": "sendData.js" }
   ],
   "builds": [
     {
