@@ -1,14 +1,14 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "routes": [
+    { "src": "/send-data", "dest": "sendData.js" }
+  ],
   "rewrites": [
     { "source": "/sign-up", "destination": "/sign-up.html" },
     { "source": "/login", "destination": "/login.html" },
     { "source": "/karir", "destination": "/karir.html" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/libs/sweetalert/(.*)", "destination": "libs/sweetalert/libs/$1" }
-  ],
-  "routes": [
-    { "src": "/send-data", "dest": "sendData.js" }
   ]
 }
