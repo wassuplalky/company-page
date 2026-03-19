@@ -139,7 +139,7 @@ app.post('/', async (req, res) => {
     }
 });
 // route login
-app.post("/login", (req,res) => {
+app.post("/api/login", (req,res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
@@ -286,7 +286,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Method Not Allowed!'});
 });
 
-app.get('/login', (req, res) => {
+app.get('/api/login', (req, res) => {
     res.json({ message: 'Method Not Allowed!'});
 });
 
