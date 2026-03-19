@@ -12,7 +12,7 @@ const port = 3001;
 const app = express();
 
 app.use(cors({
-    origin:"https://3cvjt4z6-3000.asse.devtunnels.ms",
+    origin:"https://company-page-project.vercel.app",
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'OPTIONS']
 }));
