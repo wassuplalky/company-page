@@ -1,10 +1,8 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "routes": [
-    { "src": "/send-data", "dest": "sendData.js" }
-  ],
   "rewrites": [
+    { "source": "/api/server", "destination": "/api/server.js" },
     { "source": "/sign-up", "destination": "/sign-up.html" },
     { "source": "/login", "destination": "/login.html" },
     { "source": "/karir", "destination": "/karir.html" },
