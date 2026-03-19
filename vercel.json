@@ -2,7 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/api/send-data", "destination": "/sendData.js" },
+    { "source": "/api/send-data", "destination": "/api/sendData.js" },
     { "source": "/libs/sweetalert/(.*)", "destination": "libs/sweetalert/libs/$1" },
     { "source": "/sign-up", "destination": "/sign-up.html" },
     { "source": "/login", "destination": "/login.html" },
